@@ -1,3 +1,4 @@
+
 import PyPDF2
 
 
@@ -9,7 +10,7 @@ pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 
 print(pdfReader.numPages)
 
-
+# The main thing to keep in mind that Google cloud Text-to-speech API accept only text and ssml file.If we pass pdf it will work but it start speeking not only text but also tags used in pdf file.
 text = pdfReader.getPage(0).extractText()
 
 
